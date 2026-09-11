@@ -62,18 +62,31 @@ The assignment specifications prohibit arrays, `ArrayList`, collections, recursi
 
 ## Current Repository Status
 
-The Java files are currently included as project placeholders. Their implementations can be added to the corresponding files while keeping the required input, processing, validation, and summary-output behavior described above.
+The repository contains starter implementations for the five exercises. Each Java file currently has a `main` method, and the exercise logic can be developed in the corresponding file while keeping the required input, processing, validation, and summary-output behavior described above.
 
 ## Running the Programs
 
-After implementing a program, compile and run it from the repository directory using Java:
+After installing a JDK and opening this folder in VS Code, compile and run a program from the repository directory:
 
 ```bash
-javac FileName.java
-java ClassName
+javac Project3_NumberClassificationLab.java
+java Project3_NumberClassificationLab
 ```
 
-Replace `FileName.java` and `ClassName` with the appropriate source-file and public-class names.
+Replace the filename and class name with the exercise you want to run. The filename and public class name must match exactly. The other programs can be run in the same way:
+
+```bash
+javac Project10_LoanPaymentSimulation.java && java Project10_LoanPaymentSimulation
+javac Project11_CompoundInvestmentSim.java && java Project11_CompoundInvestmentSim
+javac Project16_ElectricityBillCalc.java && java Project16_ElectricityBillCalc
+javac NumberAnalysis.java && java NumberAnalysis
+```
+
+In VS Code, the Java extension’s **Run** button above the `main` method can also compile and run the selected program. If using Code Runner, make sure its Java executor can find `javac`.
+
+## Build Outputs
+
+Compiled Java `.class` files are also ignored through `.gitignore`. Only the `.java` source files and project documentation should be committed. If compiled files already appear in Git, remove them from tracking with `git rm --cached *.class` before committing; this does not delete the local source files.
 
 ## Academic Purpose
 

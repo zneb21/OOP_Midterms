@@ -1,0 +1,16 @@
+# Java compiler output
+*.class
+
+# Local environment configuration
+.env
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Common Java build directories
+bin/
+out/
+target/
+build/
+
