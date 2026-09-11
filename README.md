@@ -14,6 +14,26 @@ This repository contains our **Object Oriented Programming (OOP) midterm group p
 - **Section:** BSCS 2A
 - **Project:** Midterm Group Project
 
+## Java Setup
+
+Follow these steps before running the programs:
+
+1. Install a **JDK (Java Development Kit)**, not only a Java Runtime Environment. The JDK includes both `java` and `javac`.
+2. Install Microsoft’s **Extension Pack for Java** in VS Code.
+3. Add the JDK location to your environment variables:
+   - Set `JAVA_HOME` to the JDK folder, such as `C:\Program Files\Java\jdk-26`.
+   - Add the JDK `bin` folder to `Path`, such as `C:\Program Files\Java\jdk-26\bin`.
+   - Do not include `\bin` in the `JAVA_HOME` value.
+4. Restart VS Code after changing environment variables.
+5. Open this repository folder in VS Code and verify the installation in the integrated terminal:
+
+```bash
+java -version
+javac -version
+```
+
+Both commands should display the installed JDK version. The `.env.example` file contains the expected local Java variables; copy it to `.env` and update the paths if needed. The `.env` file is for local reference only and is ignored by Git.
+
 ## Included Exercises
 
 ### Project 3 — Number Classification Laboratory
