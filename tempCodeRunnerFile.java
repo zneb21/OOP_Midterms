@@ -13,12 +13,6 @@ public class Project3_NumberClassificationLab {
        System.out.print("Enter your ending number:");
         int endno = input.nextInt();
         
-        // Make a String to store the numbers
-        String primelist = "";
-        String perfectlist = "";
-        String armstronglist = "";
-        String palindromelist = "";
-
         // make an int for the counters
         int primeno = 0;
         int perfectno = 0;
@@ -28,7 +22,7 @@ public class Project3_NumberClassificationLab {
         for (int number = startno; number <= endno; number++) {
 
             //Prime
-            boolean prime = number > 1;
+            boolean prime = true;
 
             for (int div1 = 2; div1 < number; div1++){
                 if (number % div1 == 0){
@@ -39,7 +33,7 @@ public class Project3_NumberClassificationLab {
 
             if (prime){
                 primeno++;
-                primelist = primelist + number + " ";
+                System.out.println("Prime number: " + number);
             }
 
             //Perfect
@@ -53,7 +47,7 @@ public class Project3_NumberClassificationLab {
 
                 if (divsum == number){
                     perfectno++;
-                    perfectlist = perfectlist + number + " ";
+                    System.out.println("Perfect number: " + number);
                 }
                 
             //Armstrong
@@ -81,7 +75,7 @@ public class Project3_NumberClassificationLab {
 
             if (countsum == number) {
                 armstrongno++;
-                armstronglist = armstronglist + number + " ";
+                System.out.println("Armstrong number: " + number);
             }
 
             
@@ -89,7 +83,7 @@ public class Project3_NumberClassificationLab {
             int rev = 0;
             int temp2 = number;
 
-            while (temp2 > 0){
+            while (temp2 < 0){
                 int digit2 = temp2 % 10;
                 rev = rev * 10 + digit2;
                 temp2 = temp2 / 10;
@@ -97,27 +91,19 @@ public class Project3_NumberClassificationLab {
 
             if (rev == number){
                 palindromeno++;
-                palindromelist = palindromelist + number + " ";
+                System.out.println("Palindrome number: " + number);
             }
 
         }
 
 
         // Displaying the totals on what the user give using the counter
-        System.out.println("\nPrime Numbers:");
-        System.out.println(primelist);
-        System.out.println("Total Prime numbers:" + primeno);
+        System.out.println("Total Prime number: " + primeno);
+        System.out.println("Total Perfect number: " + perfectno);
+        System.out.println("Total Armstrong number: " + armstrongno);
+        System.out.println("Total Palindrome number: " + palindromeno);
 
-        System.out.println("\nPerfect Numbers:");
-        System.out.println(perfectlist);
-        System.out.println("Total Perfect numbers: " + perfectno);
-    
-        System.out.println("\nArmstrong Numbers");
-        System.out.println(armstronglist);
-        System.out.println("Total Armstrong numbers: " + armstrongno);
 
-        System.out.println("\nPalindrome Numbers:");
-        System.out.println(palindromelist);
-        System.out.println("Total Palindrome numbers: " + palindromeno);
+          
     }
 }
