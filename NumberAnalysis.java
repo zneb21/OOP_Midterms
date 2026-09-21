@@ -2,19 +2,18 @@ import java.util.Scanner;
 
 public class NumberAnalysis {
 
+    static Scanner console = new Scanner(System.in);
     public static void main(String[] args) {
-
-        Scanner input = new Scanner(System.in);
 
         // Get the starting and ending number
         int start;
         int end;
 
         System.out.print("Start: ");
-        start = input.nextInt();
+        start = console.nextInt();
 
         System.out.print("End: ");
-        end = input.nextInt();
+        end = console.nextInt();
 
         // Counters
         int prime = 0;
@@ -169,6 +168,5 @@ public class NumberAnalysis {
         System.out.println("Largest Prime: " + largestPrime);
         System.out.println("Largest Perfect Number: " + largestPerfect);
         System.out.println("Largest Armstrong Number: " + largestArmstrong);
-        input.close();
     }
 }
